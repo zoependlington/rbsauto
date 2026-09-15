@@ -33,11 +33,25 @@ jobs:
       - name: Check for duplicate temporary IDs
         working-directory: src/ontology
         run: |
-          dupes=$(grep -o 'PIZZA_099[0-9]*' pizza-edit.owl | sort | uniq -d)
+          dupes=$(grep '<owl:Class rdf:about="http://example.org/pizza/PIZZA_099' pizza-edit.owl \
+            | sed -E 's/.*(PIZZA_099[0-9]+).*/\1/' | sort | uniq -d)
           if [ -n "$dupes" ]; then
             echo "Duplicate temporary IDs found:"
             echo "$dupes"
             exit 1
+          fi
+
+      - name: Warn about label capitalization
+        working-directory: src/ontology
+        run: |
+          capitals=$(grep '<rdfs:label' pizza-edit.owl \
+            | sed -E 's/.*<rdfs:label[^>]*>([^<]+)<\/rdfs:label>.*/\1/' \
+            | grep -E '[A-Z]' || true)
+          if [ -n "$capitals" ]; then
+            echo "::warning::Review capitalized labels. Capitals are reserved for proper names and Roman numerals:"
+            echo "$capitals"
+          else
+            echo "All local labels are lowercase."
           fi
 
       - name: No hand-edits under imports/

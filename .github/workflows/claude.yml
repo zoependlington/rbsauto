@@ -39,14 +39,21 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
-          # No `prompt:` here on purpose — CLAUDE.md already contains the full
-          # orchestration playbook. The action auto-detects tag mode from the
-          # @claude mention / assignment / label, same as EFO's setup.
+          prompt: |
+            Follow CLAUDE.md and handle the issue end to end. This action runs
+            in a single Claude session and may not provide separate specialist
+            subagents. If specialist dispatch is unavailable, perform the
+            curator, importer, and ontologist responsibilities yourself in
+            sequence: research and define the requested concept, verify or
+            import external FoodOn terms, edit the ontology, run the required
+            normalization and ROBOT validation, then create the issue branch,
+            commit, push, and open the pull request. Do not stop after giving
+            advice or a partial analysis.
 
           assignee_trigger: "claude"
           label_trigger: "claude"
           trigger_phrase: "@claude"
 
           claude_args: |
-            --max-turns 30
+            --max-turns 50
             --allowedTools Edit,Read,Write,Bash,Grep,Glob,WebSearch,WebFetch
