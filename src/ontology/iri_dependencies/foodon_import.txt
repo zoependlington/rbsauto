@@ -6,3 +6,4 @@
 # Example (once pizza-importer adds a real, verified term):
 # http://purl.obolibrary.org/obo/FOODON_00001234
 http://purl.obolibrary.org/obo/FOODON_00003459
+http://purl.obolibrary.org/obo/FOODON_03317294
