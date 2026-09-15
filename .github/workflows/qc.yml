@@ -24,7 +24,7 @@ jobs:
 
       - name: Syntax check
         working-directory: src/ontology
-        run: robot convert -vvv -i pizza-edit.owl -o /dev/null
+        run: robot convert -vvv -i pizza-edit.owl -o /tmp/pizza-syntax.owl
 
       - name: Reason (catches unsatisfiable classes)
         working-directory: src/ontology
