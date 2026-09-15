@@ -41,6 +41,19 @@ jobs:
             exit 1
           fi
 
+      - name: Warn about label capitalization
+        working-directory: src/ontology
+        run: |
+          capitals=$(grep '<rdfs:label' pizza-edit.owl \
+            | sed -E 's/.*<rdfs:label[^>]*>([^<]+)<\/rdfs:label>.*/\1/' \
+            | grep -E '[A-Z]' || true)
+          if [ -n "$capitals" ]; then
+            echo "::warning::Review capitalized labels. Capitals are reserved for proper names and Roman numerals:"
+            echo "$capitals"
+          else
+            echo "All local labels are lowercase."
+          fi
+
       - name: No hand-edits under imports/
         run: |
           # Fails if a PR modifies generated import files without also touching

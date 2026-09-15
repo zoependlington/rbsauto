@@ -288,7 +288,7 @@
     <!-- ============================== -->
 
     <owl:Class rdf:about="http://example.org/pizza/PIZZA_0990001">
-        <rdfs:label xml:lang="en">Hawaiian Pizza</rdfs:label>
+        <rdfs:label xml:lang="en">hawaiian pizza</rdfs:label>
         <obo:IAO_0000115 xml:lang="en">A named pizza characterized by ham and pineapple toppings on a thin and crispy base.</obo:IAO_0000115>
         <obo:IAO_0000117>AI agent</obo:IAO_0000117>
         <rdfs:subClassOf rdf:resource="http://example.org/pizza/PIZZA_0000019"/>
