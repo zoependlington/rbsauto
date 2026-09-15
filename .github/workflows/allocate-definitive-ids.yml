@@ -1,0 +1,49 @@
+name: Allocate definitive IDs
+
+# Runs after a merge to main that still contains temporary PIZZA_099xxxx IDs
+# (i.e. an agent-authored PR just landed). Opens a small follow-up PR that
+# swaps every temp ID for a real, permanent one and advances tools/next_id.txt.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/ontology/pizza-edit.owl"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  allocate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for temporary IDs
+        id: check
+        run: |
+          if grep -q 'PIZZA_099[0-9]\{4\}' src/ontology/pizza-edit.owl; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Allocate IDs
+        if: steps.check.outputs.found == 'true'
+        run: python3 tools/allocate_definitive_ids.py src/ontology/pizza-edit.owl
+
+      - name: Open PR with definitive IDs
+        if: steps.check.outputs.found == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          branch="allocate-ids-$(date +%s)"
+          git checkout -b "$branch"
+          git add src/ontology/pizza-edit.owl tools/next_id.txt
+          git commit -m "chore: allocate definitive IDs for agent-authored terms"
+          git push -u origin "$branch"
+          gh pr create --title "Allocate definitive IDs" \
+            --body "Automatically replaces temporary PIZZA_099xxxx IDs merged to main with permanent IDs. Safe to merge as soon as CI passes." \
+            --base main --head "$branch"

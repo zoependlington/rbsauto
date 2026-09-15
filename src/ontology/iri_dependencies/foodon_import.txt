@@ -1,0 +1,7 @@
+# One full IRI per line, added only by `pizza-importer` (see
+# .claude/agents/pizza-importer.md and docs/Import_terms_from_another_ontology.md).
+# Never hand-edit imports/foodon_import.owl directly -- it is generated from
+# this file via `make imports/foodon_import.owl -B`.
+#
+# Example (once pizza-importer adds a real, verified term):
+# http://purl.obolibrary.org/obo/FOODON_00001234

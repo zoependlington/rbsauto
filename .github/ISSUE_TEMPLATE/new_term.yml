@@ -1,0 +1,45 @@
+name: New pizza term
+description: Request a new named pizza, topping, or base be added to the ontology
+title: "[New term]: "
+labels: ["new-term"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Once this issue is filed, comment `@claude handle this issue` (or assign it to `claude`, or add the `claude` label) to have the agent pick it up automatically.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of term is this?
+      options:
+        - Named pizza (e.g. "Hawaiian Pizza")
+        - Topping
+        - Base
+    validations:
+      required: true
+
+  - type: input
+    id: label
+    attributes:
+      label: Proposed label
+      placeholder: "Hawaiian Pizza"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is it? For a named pizza, list every topping and base it should have.
+      placeholder: "A pizza topped with ham and pineapple on a thin and crispy base."
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else the agent should know?
+      description: Links, prior discussion, edge cases, etc.
+    validations:
+      required: false

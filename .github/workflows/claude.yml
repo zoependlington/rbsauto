@@ -1,0 +1,50 @@
+name: Claude Code Agent
+
+# Mirrors the trigger set EBISPOT/efo uses: comment mentions, issue assignment,
+# and a label, so a maintainer has three equivalent ways to hand off a ticket.
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  issues:
+    types: [opened, assigned, labeled]
+  pull_request_review:
+    types: [submitted]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  claude-response:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # ROBOT is required by every subagent (make normalize_src / robot reason).
+      - name: Install ROBOT
+        run: |
+          sudo apt-get update && sudo apt-get install -y default-jre
+          curl -L -o /usr/local/bin/robot.jar https://github.com/ontodev/robot/releases/latest/download/robot.jar
+          curl -L -o /usr/local/bin/robot https://raw.githubusercontent.com/ontodev/robot/master/bin/robot
+          chmod +x /usr/local/bin/robot
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          # No `prompt:` here on purpose — CLAUDE.md already contains the full
+          # orchestration playbook. The action auto-detects tag mode from the
+          # @claude mention / assignment / label, same as EFO's setup.
+
+          assignee_trigger: "claude"
+          label_trigger: "claude"
+          trigger_phrase: "@claude"
+
+          claude_args: |
+            --max-turns 30
+            --allowedTools Edit,Read,Write,Bash,Grep,Glob,WebSearch,WebFetch
