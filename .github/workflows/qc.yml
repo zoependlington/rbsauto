@@ -33,7 +33,8 @@ jobs:
       - name: Check for duplicate temporary IDs
         working-directory: src/ontology
         run: |
-          dupes=$(grep -o 'PIZZA_099[0-9]*' pizza-edit.owl | sort | uniq -d)
+          dupes=$(grep '<owl:Class rdf:about="http://example.org/pizza/PIZZA_099' pizza-edit.owl \
+            | sed -E 's/.*(PIZZA_099[0-9]+).*/\1/' | sort | uniq -d)
           if [ -n "$dupes" ]; then
             echo "Duplicate temporary IDs found:"
             echo "$dupes"
