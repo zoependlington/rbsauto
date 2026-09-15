@@ -35,7 +35,7 @@ jobs:
 
       - uses: anthropics/claude-code-action@v1
         with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
           # No `prompt:` here on purpose — CLAUDE.md already contains the full
           # orchestration playbook. The action auto-detects tag mode from the
