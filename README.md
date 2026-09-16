@@ -30,15 +30,23 @@ See `docs/agents-documentation/system-overview.md` for the full architecture, an
 
 ```
 .claude/agents/          # subagent specs (curator, importer, ontologist)
-.github/workflows/       # CI (robot validate/reason) + the Claude Code agent trigger
+.github/workflows/       # qc.yml (full ODK QC, Docker-based) + the Claude Code agent trigger
 .github/ISSUE_TEMPLATE/  # structured term-request issue form
 docs/                    # architecture docs + domain reference docs for the agents
-src/ontology/
-  pizza-edit.owl         # the editors' file — humans and agents both edit this
-  iri_dependencies/      # one file per external ontology we import terms from
+src/
   templates/             # ROBOT template CSVs (e.g. cross-ontology subclass axioms)
-  imports/               # generated import modules — never hand-edit these
-Makefile                 # `make normalize_src`, `make imports/...`, etc. (wraps ROBOT)
+  metadata/              # ontology metadata used by the ODK build
+  sparql/                # QC queries and reports used by the Makefile
+  ontology/
+    pizza-edit.owl       # the editors' file — humans and agents both edit this
+    pizza-odk.yaml       # ODK project configuration
+    Makefile             # ODK-generated — do not hand-edit; see pizza.Makefile
+    pizza.Makefile       # project-specific overrides go here instead
+    imports/
+      foodon_terms.txt   # curated seed list of FoodOn IRIs to import (hand-edited)
+      foodon_import.owl  # generated import module — never hand-edit
+    components/
+      subclasses.owl     # generated from src/templates/subclasses.csv — never hand-edit
 ```
 
 ## Ontology structure (what's actually in it)

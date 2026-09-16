@@ -17,7 +17,7 @@ Open an issue with the **New pizza term** template. Then either:
 
 ## House rules (same ones the agent follows — see `CLAUDE.md`)
 
-- `src/ontology/imports/` is generated. Never hand-edit it; edit `iri_dependencies/` and regenerate.
+- `src/ontology/imports/*_import.owl` is generated. Never hand-edit it; edit `src/ontology/imports/*_terms.txt` and regenerate.
 - Named pizzas need explicit `hasTopping`/`hasBase` restrictions for everything they're described as having.
 - Every new class needs a label and a definition (`obo:IAO_0000115`).
 - Work on a branch, never commit directly to `main`.

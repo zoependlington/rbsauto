@@ -1,0 +1,38 @@
+# PURL configuration for http://purl.obolibrary.org/obo/pizza
+
+idspace: PIZZA
+base_url: /obo/pizza
+
+products:
+- pizza.owl: https://github.com/zoependlington/rbsauto/releases/latest/download/pizza.owl
+- pizza.obo: https://github.com/zoependlington/rbsauto/releases/latest/download/pizza.obo
+
+term_browser: ontobee
+example_terms:
+- PIZZA_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://github.com/zoependlington/rbsauto/releases/download/v
+
+- prefix: /tracker/
+  replacement: https://github.com/zoependlington/rbsauto/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/PIZZA?iri=http://purl.obolibrary.org/obo/
+
+# For files that are imported from the -edit file, we cannot point to
+# the latest release download folder as we do below in the "generic"
+# fall-through, because those files are _not_ release artefacts and are
+# absent from that folder. Instead, we point to the current main branch.
+
+- prefix: /imports/
+  replacement: https://github.com/zoependlington/rbsauto/raw/refs/heads/main/src/ontology/imports/
+
+- prefix: /components/
+  replacement: https://github.com/zoependlington/rbsauto/raw/refs/heads/main/src/ontology/components/
+
+# Generic fall-through, serve from the latest release artefacts
+- prefix: /
+  replacement: https://github.com/zoependlington/rbsauto/releases/latest/download/

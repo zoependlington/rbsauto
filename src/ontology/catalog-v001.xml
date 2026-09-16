@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public"
-    xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri name="http://purl.obolibrary.org/obo/foodon.owl"
-         uri="imports/foodon_import.owl"/>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <group id="odk-managed-catalog" prefer="public">
+    <uri name="http://purl.obolibrary.org/obo/pizza/imports/foodon_import.owl" uri="imports/foodon_import.owl"/>
+    <uri name="http://purl.obolibrary.org/obo/pizza/components/subclasses.owl" uri="components/subclasses.owl"/>
+  </group>
 </catalog>
