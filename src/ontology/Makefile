@@ -12,11 +12,11 @@ SRC := pizza-edit.owl
 # Reformat pizza-edit.owl into a canonical, diff-friendly form. Run this
 # after every manual or agent edit, before committing.
 normalize_src:
-	$(ROBOT) convert -i $(SRC) -o $(SRC) --format xml
+	$(ROBOT) convert -i $(SRC) -o $(SRC) --format owl
 
 # Syntax check only, no semantics.
 convert:
-	$(ROBOT) convert -vvv -i $(SRC) -o /dev/null
+	$(ROBOT) convert -vvv -i $(SRC) -o /tmp/pizza-syntax.owl
 
 # Full OWL reasoning: consistency + unsatisfiable class check.
 reason:
