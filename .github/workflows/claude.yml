@@ -50,6 +50,13 @@ jobs:
             commit, push, and open the pull request. Do not stop after giving
             advice or a partial analysis.
 
+            Always post a comment on the triggering issue yourself, using the
+            gh CLI (e.g. gh issue comment <number> --body "..."). Do not rely
+            on any comment the action posts automatically. Post one comment
+            near the start acknowledging you're working on it, and one at the
+            end summarizing what you did and linking the PR you opened (or
+            explaining clearly why you could not complete the task).
+
           assignee_trigger: "claude"
           label_trigger: "claude"
           trigger_phrase: "@claude"
