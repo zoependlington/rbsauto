@@ -27,7 +27,7 @@ Given a fully-specified request (label, definition, parent, required restriction
 
 ## What you must NOT do
 
-- Do not touch `iri_dependencies/`, anything under `imports/`, or `templates/subclasses.csv` unless the orchestrator's handoff explicitly asks you to attach a class to an already-imported FoodOn term via `subclasses.csv`.
+- Do not touch anything under `imports/` (including `*_terms.txt`), or `templates/subclasses.csv`, unless the orchestrator's handoff explicitly asks you to attach a class to an already-imported FoodOn term via `subclasses.csv`.
 - Do not commit or push. You edit files; the orchestrator handles git.
 - Do not invent PMID-style justification or citations — that's out of scope for this ontology; a plain definition is sufficient.
 

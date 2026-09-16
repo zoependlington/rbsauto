@@ -27,13 +27,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      # ROBOT is required by every subagent (make normalize_src / robot reason).
-      - name: Install ROBOT
+      # Real Ontology Development Kit toolchain, pinned to the same ROBOT
+      # version ODK's own odkfull image currently ships (1.9.10), plus
+      # odk-core for `odk-helper` (used by the generated Makefile's mirror
+      # download step). The full odkfull Docker image adds extras (owltools,
+      # dicer-cli, tsvalid) that only the `make test` / `make prepare_release`
+      # targets need -- those run separately in .github/workflows/qc.yml.
+      - name: Install ODK toolchain (ROBOT + odk-helper + odk plugin)
         run: |
           sudo apt-get update && sudo apt-get install -y default-jre
-          curl -L -o /usr/local/bin/robot.jar https://github.com/ontodev/robot/releases/latest/download/robot.jar
-          curl -L -o /usr/local/bin/robot https://raw.githubusercontent.com/ontodev/robot/master/bin/robot
+          curl -L -o /usr/local/bin/robot.jar https://github.com/ontodev/robot/releases/download/v1.9.10/robot.jar
+          curl -L -o /usr/local/bin/robot https://raw.githubusercontent.com/ontodev/robot/v1.9.10/bin/robot
           chmod +x /usr/local/bin/robot
+          pip install --break-system-packages odk-core
+          mkdir -p plugins
+          curl -L -o plugins/odk.jar https://github.com/INCATools/odk-robot-plugin/releases/download/odk-robot-plugin-0.3.3/odk.jar
 
       - uses: anthropics/claude-code-action@v1
         with:

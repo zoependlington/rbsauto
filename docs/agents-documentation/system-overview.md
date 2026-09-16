@@ -5,7 +5,7 @@
 Ontology curation has a recurring structure that maps cleanly onto separate agent roles:
 
 1. **Is this concept sound, and what's its definition?** — research/judgment work, no file mutation risk if it goes wrong. → `pizza-curator`
-2. **Does this concept already exist upstream, in an ontology we can import from?** — a lookup + a very mechanical file edit (one line in `iri_dependencies/`, then regenerate). → `pizza-importer`
+2. **Does this concept already exist upstream, in an ontology we can import from?** — a lookup + a very mechanical file edit (one line in `imports/`, then regenerate). → `pizza-importer`
 3. **Encode it correctly in OWL** — the highest-risk step (malformed axioms, ID clashes, broken restrictions). → `pizza-ontologist`
 
 Splitting these into separate subagents gives each one a narrow tool surface and a narrow job, which makes their output easier to check — a report from `pizza-curator` is just prose you can read, `pizza-importer`'s diff is one line plus a regenerated file, and `pizza-ontologist`'s diff is the only place OWL axioms actually change.
@@ -35,7 +35,7 @@ issue opened (New pizza term template)
         │                    ▼                     ▼                     ▼
         │            pizza-curator          pizza-importer         pizza-ontologist
         │            (definition,           (FoodOn lookup,        (edits pizza-edit.owl,
-        │             parent, restrictions)   iri_dependencies)      runs robot reason)
+        │             parent, restrictions)   imports/*_terms.txt)   runs robot reason)
         │                    │                     │                     │
         │                    └─────────────────────┴─────────────────────┘
         │                                          │

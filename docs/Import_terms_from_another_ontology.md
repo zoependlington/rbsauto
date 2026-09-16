@@ -18,7 +18,7 @@ Fetch the term's own record and check its definition and immediate parent. Food/
 
 ## 3. Add the dependency
 
-Append the full IRI to `src/ontology/iri_dependencies/foodon_import.txt`, one IRI per line. Never edit `src/ontology/imports/foodon_import.owl` directly — it's generated.
+Append the full IRI to `src/ontology/imports/foodon_terms.txt`, one IRI per line. Never edit `src/ontology/imports/foodon_import.owl` directly — it's generated.
 
 ## 4. Regenerate
 
@@ -30,7 +30,7 @@ make imports/foodon_import.owl -B
 
 ## 5. Attach it in pizza-edit.owl (pizza-ontologist's step, not importer's)
 
-If the imported term needs to sit as a subclass of something pizza-specific (e.g. the imported FoodOn "ham" term should be cross-referenced from our `PizzaTopping` hierarchy), add the axiom to `src/ontology/templates/subclasses.csv` rather than hand-editing `pizza-edit.owl`'s imports block, then run:
+If the imported term needs to sit as a subclass of something pizza-specific (e.g. the imported FoodOn "ham" term should be cross-referenced from our `PizzaTopping` hierarchy), add the axiom to `src/templates/subclasses.csv` rather than hand-editing `pizza-edit.owl`'s imports block, then run:
 
 ```bash
 make components/subclasses.owl

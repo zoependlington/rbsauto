@@ -11,7 +11,7 @@
     <owl:Ontology rdf:about="http://example.org/pizza/pizza-edit.owl">
         <rdfs:comment xml:lang="en">Demo ontology for the Pizza Ontology Claude Code agent example. Deliberately toy content -- see README.md. Structure loosely follows the Manchester Pizza tutorial ontology used for teaching OWL/Protege.</rdfs:comment>
         <owl:versionInfo>0.1.0</owl:versionInfo>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/foodon.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/pizza/imports/foodon_import.owl"/>
     </owl:Ontology>
 
     <!-- ============================== -->

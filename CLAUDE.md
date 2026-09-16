@@ -15,7 +15,7 @@ This is a multi-agent system. **You are the orchestrator** — the only one who 
 | Subagent           | Job                                                                                          | You dispatch it when…                                                              |
 | ------------------- | ---------------------------------------------------------------------------------------------| -------------------------------------------------------------------------------------|
 | `pizza-curator`     | Confirms the concept is real/sane, writes a definition, proposes parent + topping/base axioms, flags ambiguity | A new term needs a definition or its classification isn't obvious                    |
-| `pizza-importer`    | Finds + validates external ingredient terms via FoodOn, adds IRIs to `iri_dependencies/`, regenerates imports | A topping/ingredient concept already exists in FoodOn and should be imported, not authored fresh |
+| `pizza-importer`    | Finds + validates external ingredient terms via FoodOn, adds IRIs to `imports/`, regenerates imports | A topping/ingredient concept already exists in FoodOn and should be imported, not authored fresh |
 | `pizza-ontologist`  | Edits `src/ontology/pizza-edit.owl` directly — adds/edits classes, restrictions, equivalence axioms; normalizes | The ontology file itself needs editing, after research/imports are done              |
 
 **Critical constraints of this system:**
@@ -104,7 +104,7 @@ These are the rules you and the subagents must never violate. Deep technical det
 
 ### Imports (always delegated to `pizza-importer`)
 
-- Edit only `src/ontology/iri_dependencies/foodon_import.txt` (full IRI per line). **Never** hand-edit generated files in `src/ontology/imports/`.
+- Edit only `src/ontology/imports/foodon_terms.txt` (full IRI per line). **Never** hand-edit generated files elsewhere in `src/ontology/imports/`.
 - Regenerate with `make imports/foodon_import.owl -B` after editing the dependency list.
 - Cross-ontology `SubClassOf` axioms (e.g. a pizza topping ⊑ an imported FoodOn ingredient class) go in `src/templates/subclasses.csv` **only if** the axiom doesn't already exist upstream.
 

@@ -1,5 +1,5 @@
 # Generated -- do not hand-edit
 
-Everything in this directory is produced by `make imports/foodon_import.owl -B` from `../iri_dependencies/foodon_import.txt`. If you find yourself wanting to edit a file here directly, edit the corresponding `iri_dependencies/*.txt` entry instead and regenerate.
+Everything in this directory named `*_import.owl` is produced by `make imports/foodon_import.owl -B` from the `*_terms.txt` file of the same name, in this same directory. If you find yourself wanting to edit a generated file here directly, edit the corresponding `*_terms.txt` entry instead and regenerate.
 
-QC (`.github/workflows/qc.yml`) fails any PR that modifies a file under this directory without a corresponding change to `iri_dependencies/`.
+QC (`.github/workflows/qc.yml`) fails any PR that modifies a generated `*_import.owl` file without a corresponding change to its `*_terms.txt` seed list.
