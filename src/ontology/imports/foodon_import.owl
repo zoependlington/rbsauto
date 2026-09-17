@@ -315,6 +315,44 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00005501"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>A food product made of meat, the skeletal muscle and associated fat, and other edible tissues such as organs, livers, skin, brains, bone marrow, kidneys, or lungs, of mammals.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Meat"/>
+        <oboInOwl:hasDbXref rdf:resource="https://bioregistry.io/reference/siren:F17332"/>
+        <rdfs:label xml:lang="en">mammalian meat food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001010"/>
+        <obo:IAO_0000115 xml:lang="en">A processed meat food product that is made from a sausage.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0001-5275-8866"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-10-28T11:02:42Z</terms:date>
+        <rdfs:label xml:lang="en">meat sausage food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001006"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03311737"/>
+        <obo:IAO_0000115 xml:lang="en">A processed food product consisting of meat which has been subjected to preservation and/or taste altering processes such as grinding, salting, curing, fermentation, smoking, and addition of chemical preservatives.</obo:IAO_0000115>
+        <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Processed_meat"/>
+        <rdfs:label xml:lang="en">processed meat food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001015">
@@ -338,6 +376,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00004242"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00005502"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A food product which is derived from or produced by an animal that has a vertibrae.</obo:IAO_0000115>
+        <terms:contributor>Damion Dooley</terms:contributor>
+        <rdfs:label xml:lang="en">vertebrate food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001261 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001261">
@@ -346,6 +397,16 @@
         <rdfs:comment xml:lang="en">FAO definition for vegetable: &quot;Vegetables are plants cultivated both as field crops and garden crops, both in the open and under glass.&quot; and also: &quot;Vegetables are grouped according to botanic characteristics as follows: leafy or stem vegetables (e.g., cabbage); fruit-bearing vegetables (e.g., melons); flower vegetables (e.g., cauliflowers); root, bulb and tuberous vegetables (e.g., onion); leguminous vegetables (e.g., green peas); other vegetables (e.g., green maize and mushrooms).&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">vegetable food product</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.fao.org/economic/the-statistics-division-ess/methodology/methodology-systems/crops-statistics-concepts-definitions-and-classifications/en/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001605 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001605">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001007"/>
+        <obo:IAO_0000115 xml:lang="en">Sausage which has animal meat as a defining ingredient.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">animal product sausage</rdfs:label>
     </owl:Class>
     
 
@@ -375,6 +436,19 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00002645 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00002645">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002403"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Food material organized by the process which it results from.</obo:IAO_0000115>
+        <obo:IAO_0000117>Damion Dooley</obo:IAO_0000117>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-23T23:02:07Z</terms:date>
+        <rdfs:label xml:lang="en">food material by process</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00003459 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00003459">
@@ -387,6 +461,20 @@
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-24T23:35:56Z</terms:date>
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-02-18T00:10:43</terms:date>
         <rdfs:label xml:lang="en">pineapple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00004242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004242">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420164"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A food product that is derived from some animal.</obo:IAO_0000115>
+        <terms:contributor>http://orcid.org/0000-0002-8844-9165</terms:contributor>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-08-01T21:25:29Z</terms:date>
+        <rdfs:label xml:lang="en">animal food product</rdfs:label>
     </owl:Class>
     
 
@@ -404,6 +492,55 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00005501 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00005501">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00005502"/>
+        <obo:IAO_0000115 xml:lang="en">Material which derives from one or more mammals.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-26T00:35:09Z</terms:date>
+        <rdfs:label xml:lang="en">mammal material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00005502 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00005502">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420164"/>
+        <obo:IAO_0000115 xml:lang="en">Material which derives from one or more vertebrate animals.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-26T00:38:18Z</terms:date>
+        <rdfs:label xml:lang="en">vertebrate material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03311737 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03311737">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00002645"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <oboInOwl:hasDbXref rdf:resource="https://bioregistry.io/reference/siren:F11737"/>
+        <rdfs:label xml:lang="en">processed food</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03317294 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03317294">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001605"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <oboInOwl:hasDbXref rdf:resource="https://bioregistry.io/reference/siren:F17294"/>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* solid FOODON:03430151
+* meat part of animal FOODON:03420103</rdfs:comment>
+        <rdfs:label xml:lang="en">italian sausage</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_03420116 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420116">
@@ -417,6 +554,22 @@
         <rdfs:comment xml:lang="en">LanguaL curation note: &quot;e.g. *LEAF*, *ROOT OR TUBER*, *ORGAN MEAT*, *MILK* OR *EGG*; it also includes components of parts, such as *CREAM*, and extracts, concentrates or isolates, such as *PROTEIN EXTRACT* or *SUGAR*.&quot;</rdfs:comment>
         <rdfs:comment xml:lang="en">Old definition as of Feb 25, 2025: Anatomical or other part(s) or substances derived from plant or animal or fungal organisms.</rdfs:comment>
         <rdfs:label xml:lang="en">organism material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420164 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420164">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420116"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Material that derives from one or more animals</obo:IAO_0000115>
+        <terms:contributor>https://orcid.org/0000-0001-5275-8866</terms:contributor>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-08-01T21:25:29Z</terms:date>
+        <oboInOwl:hasDbXref rdf:resource="http://www.langual.org/langual_thesaurus.asp?termid=C0164"/>
+        <rdfs:comment xml:lang="en">Langual note: Includes eggs and milk that, although separated from the animal, are produced as integral parts and are affected by the animal&apos;s food intake and metabolism.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This branch isn&apos;t necessarily food material</rdfs:comment>
+        <rdfs:label xml:lang="en">animal material</rdfs:label>
     </owl:Class>
     
 
