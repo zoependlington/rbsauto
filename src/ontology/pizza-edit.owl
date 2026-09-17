@@ -325,6 +325,62 @@
         </rdfs:subClassOf>
     </owl:Class>
 
+    <owl:Class rdf:about="http://example.org/pizza/PIZZA_0990001">
+        <rdfs:label xml:lang="en">four cheese pizza</rdfs:label>
+        <obo:IAO_0000115 xml:lang="en">A named pizza on a thin and crispy base topped with mozzarella, gorgonzola, fontina, and parmesan.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym xml:lang="en">quattro formaggi pizza</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000117>AI agent</obo:IAO_0000117>
+        <rdfs:subClassOf rdf:resource="http://example.org/pizza/PIZZA_0000019"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/pizza/PIZZA_R0000002"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/pizza/PIZZA_0000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/pizza/PIZZA_R0000001"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/pizza/PIZZA_0000007"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/pizza/PIZZA_R0000001"/>
+                <owl:someValuesFrom rdf:resource="http://example.org/pizza/PIZZA_0000008"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/pizza/PIZZA_R0000001"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001031"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/pizza/PIZZA_R0000001"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310415"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <!-- Closure axiom, see the comment on MargheritaPizza above. This one
+             keeps FourCheesePizza IN VegetarianPizza, since all four toppings
+             are cheeses (no meat/seafood topping asserted). -->
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.org/pizza/PIZZA_R0000001"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://example.org/pizza/PIZZA_0000007"/>
+                            <rdf:Description rdf:about="http://example.org/pizza/PIZZA_0000008"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_00001031"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/FOODON_03310415"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
     <owl:Class rdf:about="http://example.org/pizza/PIZZA_0000022">
         <rdfs:label xml:lang="en">vegetarian pizza</rdfs:label>
         <obo:IAO_0000115 xml:lang="en">A pizza with no meat topping and no seafood topping. Membership is inferred by the reasoner from a pizza's asserted toppings, not asserted directly.</obo:IAO_0000115>
