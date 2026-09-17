@@ -315,6 +315,22 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001256"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000115>Cheese is a food derived from milk that is produced in a wide range of flavors, textures, and forms by coagulation of the milk protein casein.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="https://bioregistry.io/reference/siren:F1076"/>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Cheese</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym xml:lang="en">cheese</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">cheese food product</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://www.asmscience.org/content/book/10.1128/9781555818593.chap3"/>
+        <rdfs:seeAlso rdf:resource="https://www.asmscience.org/content/journal/microbiolspec/10.1128/microbiolspec.CM-0003-2012"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001015">
@@ -328,12 +344,129 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001065"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001127"/>
+        <obo:IAO_0000115>A drum of very rich, creamy, pungent blue-veined cow&apos;s milk cheese. It has a white paste with blue veining and a brined rind. It is made in Gorgonzola, near Milan.</obo:IAO_0000115>
+        <rdfs:label xml:lang="en">gorgonzola cheese food product</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001031"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A drum of very rich, creamy, pungent blue-veined cow&apos;s milk cheese. It has a white paste with blue veining and a brined rind. It is made in Gorgonzola, near Milan.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.whatamieating.com/?b=1&amp;d=1&amp;t=main&amp;s=Gorgonzola&amp;r=All</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00001057 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001057">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001261"/>
         <obo:IAO_0000115 xml:lang="en">A food product derived from plant fruit.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">plant fruit food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001065 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001065">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001013"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>A class of cow&apos;s milk, sheep&apos;s milk, or goat&apos;s milk cheeses that have had Penicillium cultures added so that the final product is spotted or veined throughout with blue, blue-gray or blue-green mould, and carries a distinct smell.</obo:IAO_0000115>
+        <oboInOwl:hasDbXref rdf:resource="https://bioregistry.io/reference/siren:F1128"/>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* solid FOODON:03430151
+* curd FOODON:03420245
+* curing or aging process FOODON:03460253
+* interior mold curing process FOODON:03460331</rdfs:comment>
+        <rdfs:label xml:lang="en">blue cheese food product</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/List_of_blue_cheeses</rdfs:seeAlso>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001065"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A class of cow&apos;s milk, sheep&apos;s milk, or goat&apos;s milk cheeses that have had Penicillium cultures added so that the final product is spotted or veined throughout with blue, blue-gray or blue-green mould, and carries a distinct smell.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>Wikipedia:Blue_cheese</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00004242"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00005502"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A food product which is derived from or produced by an animal that has a vertibrae.</obo:IAO_0000115>
+        <terms:contributor>Damion Dooley</terms:contributor>
+        <rdfs:label xml:lang="en">vertebrate food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001256"/>
+        <rdfs:label xml:lang="en">bovine dairy food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001107"/>
+        <rdfs:label xml:lang="en">cattle dairy food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001126">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001013"/>
+        <rdfs:label xml:lang="en">bovine cheese food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001126"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001771"/>
+        <rdfs:label xml:lang="en">cow milk cheese</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001256 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001256">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001092"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00005501"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A dairy food product has mammilian milk or a milk component as an ingredient.</obo:IAO_0000115>
+        <terms:contributor xml:lang="en">Damion Dooley</terms:contributor>
+        <oboInOwl:hasDbXref rdf:resource="http://www.langual.org/langual_thesaurus.asp?termid=H0242"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">dairy product</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">milk product</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">dairy food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001257 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001257">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001256"/>
+        <rdfs:label xml:lang="en">milk or milk based food product</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Fat_content_of_milk#/media/File:Milkproducts.svg"/>
     </owl:Class>
     
 
@@ -346,6 +479,25 @@
         <rdfs:comment xml:lang="en">FAO definition for vegetable: &quot;Vegetables are plants cultivated both as field crops and garden crops, both in the open and under glass.&quot; and also: &quot;Vegetables are grouped according to botanic characteristics as follows: leafy or stem vegetables (e.g., cabbage); fruit-bearing vegetables (e.g., melons); flower vegetables (e.g., cauliflowers); root, bulb and tuberous vegetables (e.g., onion); leguminous vegetables (e.g., green peas); other vegetables (e.g., green maize and mushrooms).&quot;</rdfs:comment>
         <rdfs:label xml:lang="en">vegetable food product</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.fao.org/economic/the-statistics-division-ess/methodology/methodology-systems/crops-statistics-concepts-definitions-and-classifications/en/"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001771 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001771">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001118"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001257"/>
+        <rdfs:label xml:lang="en">cow milk based food product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00001778 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00001778">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001127"/>
+        <rdfs:label xml:lang="en">cow milk hard cheese food product</rdfs:label>
     </owl:Class>
     
 
@@ -391,6 +543,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/FOODON_00004242 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004242">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001002"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420164"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A food product that is derived from some animal.</obo:IAO_0000115>
+        <terms:contributor>http://orcid.org/0000-0002-8844-9165</terms:contributor>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-08-01T21:25:29Z</terms:date>
+        <rdfs:label xml:lang="en">animal food product</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/FOODON_00004331 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00004331">
@@ -401,6 +567,54 @@
         <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-02T22:31:04Z</terms:date>
         <rdfs:label xml:lang="en">plant material</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00005501 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00005501">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00005502"/>
+        <obo:IAO_0000115 xml:lang="en">Material which derives from one or more mammals.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-26T00:35:09Z</terms:date>
+        <rdfs:label xml:lang="en">mammal material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_00005502 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_00005502">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420164"/>
+        <obo:IAO_0000115 xml:lang="en">Material which derives from one or more vertebrate animals.</obo:IAO_0000115>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-8844-9165"/>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-08-26T00:38:18Z</terms:date>
+        <rdfs:label xml:lang="en">vertebrate material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03310415 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03310415">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_00001778"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Fontina is an Italian cow&apos;s milk cheese.</obo:IAO_0000115>
+        <terms:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1816-4260</terms:contributor>
+        <oboInOwl:hasDbXref rdf:resource="https://bioregistry.io/reference/siren:F10415"/>
+        <rdfs:comment xml:lang="en">SIREN DB annotation:
+* solid FOODON:03430151
+* curd FOODON:03420245
+* lactic acid-other agent fermentation process FOODON:03460107
+* curing or aging process FOODON:03460253</rdfs:comment>
+        <rdfs:label xml:lang="en">fontina cheese</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/FOODON_03310415"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget xml:lang="en">Fontina is an Italian cow&apos;s milk cheese.</owl:annotatedTarget>
+        <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Fontina</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -417,6 +631,22 @@
         <rdfs:comment xml:lang="en">LanguaL curation note: &quot;e.g. *LEAF*, *ROOT OR TUBER*, *ORGAN MEAT*, *MILK* OR *EGG*; it also includes components of parts, such as *CREAM*, and extracts, concentrates or isolates, such as *PROTEIN EXTRACT* or *SUGAR*.&quot;</rdfs:comment>
         <rdfs:comment xml:lang="en">Old definition as of Feb 25, 2025: Anatomical or other part(s) or substances derived from plant or animal or fungal organisms.</rdfs:comment>
         <rdfs:label xml:lang="en">organism material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/FOODON_03420164 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/FOODON_03420164">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/FOODON_03420116"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Material that derives from one or more animals</obo:IAO_0000115>
+        <terms:contributor>https://orcid.org/0000-0001-5275-8866</terms:contributor>
+        <terms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-08-01T21:25:29Z</terms:date>
+        <oboInOwl:hasDbXref rdf:resource="http://www.langual.org/langual_thesaurus.asp?termid=C0164"/>
+        <rdfs:comment xml:lang="en">Langual note: Includes eggs and milk that, although separated from the animal, are produced as integral parts and are affected by the animal&apos;s food intake and metabolism.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This branch isn&apos;t necessarily food material</rdfs:comment>
+        <rdfs:label xml:lang="en">animal material</rdfs:label>
     </owl:Class>
     
 
