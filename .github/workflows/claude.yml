@@ -62,5 +62,5 @@ jobs:
           trigger_phrase: "@claude"
 
           claude_args: |
-            --max-turns 50
+            --max-turns 100
             --allowedTools Edit,Read,Write,Bash,Grep,Glob,WebSearch,WebFetch
