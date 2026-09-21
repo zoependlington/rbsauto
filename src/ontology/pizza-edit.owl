@@ -382,7 +382,7 @@
 
     <!-- http://example.org/pizza/PIZZA_0000022 -->
 
-    <owl:Class rdf:about="http://example.org/pizza/PIZZA_0990001">
+    <owl:Class rdf:about="http://example.org/pizza/PIZZA_0000101">
         <rdfs:label xml:lang="en">four cheese pizza</rdfs:label>
         <obo:IAO_0000115 xml:lang="en">A named pizza on a thin and crispy base topped with mozzarella, gorgonzola, fontina, and parmesan.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym xml:lang="en">quattro formaggi pizza</oboInOwl:hasExactSynonym>
