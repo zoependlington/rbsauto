@@ -41,6 +41,18 @@ jobs:
             exit 1
           fi
 
+      - name: Check for duplicate definitive IDs
+        working-directory: src/ontology
+        run: |
+          dupes=$(grep -oE '<owl:Class rdf:about="http://example.org/pizza/PIZZA_[0-9]{7}"' pizza-edit.owl \
+            | grep -v 'PIZZA_099' \
+            | sed -E 's/.*(PIZZA_[0-9]{7}).*/\1/' | sort | uniq -d)
+          if [ -n "$dupes" ]; then
+            echo "Duplicate definitive IDs found -- two different terms are sharing one ID:"
+            echo "$dupes"
+            exit 1
+          fi
+
       - name: Warn about label capitalization
         working-directory: src/ontology
         run: |
