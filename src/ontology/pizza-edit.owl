@@ -509,9 +509,9 @@
     
 
 
-    <!-- http://example.org/pizza/PIZZA_0000102 -->
+    <!-- http://example.org/pizza/PIZZA_0000101 -->
 
-    <owl:Class rdf:about="http://example.org/pizza/PIZZA_0000102">
+    <owl:Class rdf:about="http://example.org/pizza/PIZZA_0000101">
         <rdfs:subClassOf rdf:resource="http://example.org/pizza/PIZZA_0000019"/>
         <rdfs:subClassOf>
             <owl:Restriction>
